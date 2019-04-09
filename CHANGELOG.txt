@@ -1,0 +1,210 @@
+Version 2.16.0 [09-04-2019]
+Replaced FontAwesome PRO with FontAwesome Free
+Fixed typo </div> in line 121 in index.php
+
+Version 2.15.0 [04-02-2019]
+Added Default Module styling parameters
+
+Version 2.14.1 [30-01-2019]
+Removed ../system.css in lesshelper
+
+Version 2.14.0 [19-01-2019]
+Added label before collapse-menu
+Updated FontAwesome Pro 5.6.3
+
+Version 2.13.3 [20-11-2018]
+Updated FontAwesome Pro 5.5.0
+
+Version 2.13.2 [26-10-2018]
+Changed bloglayout added Article-ID
+Updated FontAwesome Pro 5.4.1
+
+Version 2.13.1 [30-08-2018]
+Updated FontAwesome Pro 5.3.1
+
+Version 2.13.0 [18-08-2018]
+Added Multicolumn Dropdown
+
+Version 2.12.1 [17-08-2018]
+Improved Whatsapp Sharebutton
+
+Version 2.12.0 [24-07-2018]
+Added new logoposition above navbar
+Added Logobar display options
+Added Navbar Align option Center
+Added Fontcolor options
+Added Fontcolor Colorpicker parameters
+Added Headingcolor Colorpicker parameters
+Added Fullscreen menu
+Added Offcanvas menu
+Added Mobilemenu Top position
+Added Mobilemenu position
+Added Mobilemenu Bottom position
+Added Position Screenshot to Template description
+Changed Fontawesome path to /fonts
+Changed Split up less files
+Changed Colors to Colorpicker parameters
+Changed Padding to Parameters
+Changed Hide on Phone to Responsive Parameters for all positions
+Fixed Double Padding Fix on Mobile devices
+Improved Language strings
+Improved params.php
+Updated FontAwesome Pro 5.2.0
+
+Version 2.11.6 [13-07-2018]
+Added Toolbar ID
+Added Navbar ID
+
+Version 2.11.5 [13-07-2018]
+Fixed initial-scale=1
+
+Version 2.11.4 [23-06-2018]
+Add fonts.css to helper.php
+Fixed Blog Columns
+Updated FontAwesome Pro 5.1.0
+
+Version 2.11.3 [18-04-2018]
+Add notitle to menu-modules
+Add fonts.css to offline page
+Add fonts.css to component page
+Updated FontAwesome Pro 5.0.10
+Remove Container-fluid from error page
+
+Version 2.11.2 [04-04-2018]
+Changed params.php to namespacing
+Changed component.php to namespacing
+Changed error.php to namespacing
+Changed index.php to namespacing
+Changed offline.php to namespacing
+
+Version 2.11.1 [01-04-2018]
+Changed Fontawesome JS to Less
+
+Version 2.11.0 [01-04-2018]
+Added localstorageFont
+Changed helper to namespacing
+Changed fonts to base64 fonts
+Moved /less/fonts.less to /css/fonts.css
+Added loading fonts.css in error.php
+Removed fonts-folder
+Removed module-postion in error.php
+
+Version 2.10.5 [28-03-2018]
+Removed Cookiebar due to GDPR
+Changed Google Fonts to modern browsers only
+Updated FontAwesome Pro 5.0.9
+
+Version 2.10.4 [25-03-2018]
+Fixed Component on Homepage option for Multilanguage websites
+
+Version 2.10.3 [24-03-2018]
+Removed Mixpanel Analytics
+Removed Facebook Pixel Analytics
+
+Version 2.10.2 [24-03-2018]
+Fixed Cookiebar Expire days
+
+Version 2.10.1 [24-03-2018]
+Fixed Cookiebar use SSL 
+Changed Cookiebar Testmode to Expire days
+
+Version 2.10.0 [23-03-2018]
+Added Animate.css
+
+Version 2.9.1 [17-03-2018]
+Fixed Cookiebar Test Mode option
+
+Version 2.9.0 [17-03-2018]
+Added Cookiebar
+Fixed Bootstrap2 Error-Alert
+Fixed Offline-page 
+Removed modulestyle Well
+Removed modulestyle Panel
+Removed FontAwesome4 Upgrade script
+Removed useless Favicon and AppIcon scripts
+Renamed modulestyle Joomill_equal to Equal
+Renamed modulestyle None to Notitle
+Renamed modulestyle Basic to Notitle
+Renamed Yes to JYES
+Renamed No to JNO
+Cleanup modulestyle Equal code
+Cleanup modulestyle Notitle code
+Cleanup Component/print-page
+Cleanup Error-page
+Cleanup Offline-page
+Cleanup Back to top scroller code
+
+Version 2.8.0 [13-03-2018]
+Added Override for loginpage
+Added Mainbody Color
+Added Mainbody Padding
+Added Mainbody Width
+Updated FontAwesome Pro 5.0.8
+Renamed Span to Componentwidth
+Renamed Left to Leftwidth
+Renamed Right to Rightwidth
+Cleanup Back to top scroller code
+Back to top scroller from glyphicons to FontAwesome
+Moved sidebar settings to module tab
+Removed sidebar margin-top from maestro-lessfile
+
+Version 2.7.0 [03-03-2018]
+Added Bodyclass - Language
+Added Bodyclass - Member/Guest
+Added Bodyclass - Parent menu-item
+Added Navlist styling for 2nd level menu
+Updated FontAwesome Pro 5.0.6
+Changed Fluid to Container-fluid
+Fixed Margin left/right for slideshow module
+Renamed Component on Homepage parameter
+
+Version 2.6.0 [12-01-2018]
+Added Nav-wrapper to prevend jumping on scroll
+Added Social Share options
+Added Social icon for Twitter
+Added Social icon for Facebook
+Added Social icon for Linkedin
+Added Social icon for Google+
+Added Social icon for Email
+Added Social icon for Whatsapp
+Added Social icon for QR Code
+Added styling for dropdown / textarea
+
+Version 2.5.0 [15-12-2017]
+Remove Horizontal menu
+Remove Pills menu
+Added JC menu
+Added Frontend editing view for Joomla Articles
+Added Copyright align
+Added Google Tag Manager
+Added Mixpanel.com
+Added Google Code for Remarketing
+Added Facebook Pixel
+Added Bootstrap3 Alert messages
+Changed Better position HTML Comments
+Fixed Check Footer-menu modules before showing 
+Moved Sidebar width to Advanced Tab
+Moved Google Analytics to helper.php
+
+Version 2.4.0 [27-10-2017]
+Added Menu Align
+Added Breadcrumbs styling
+Added Copyright styling
+Added Scroll to top option
+Updated FontAwesome Pro RC3
+
+Version 2.3.0 [1-9-2017]
+Added Scroll to Top
+Updated FontAwesome Pro Beta 5
+
+Version 2.2.0 [30-6-2017]
+Removed Font Awesome 4
+Added Font Awesome 5.0.0 PRO alpha 2
+Added Sticky Header and offset options
+
+Version 2.1.0 [28-6-2017]
+Changed New Joomla way to load CSS and JS
+Added Google Analytics tracking code
+
+Version 2.0.0 [26-6-2017]
+First Release

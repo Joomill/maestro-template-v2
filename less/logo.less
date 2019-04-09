@@ -1,0 +1,31 @@
+/* ========================================================================
+   LOGO
+ ========================================================================== */
+
+.navbar-logo {
+  height: @main-menu-height;
+  overflow: hidden;
+  clear: left;
+}
+
+.navbar-logo .logo {
+  display: block;
+  height: @main-menu-height;
+  margin: 0 auto;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+  p {
+    margin: 0px;
+  }
+  @media (max-width: @screen-xs) {
+    float: left;
+  }
+  @media (max-width: 300px) {
+    background: none;
+    padding-left: 7px;
+  }
+}

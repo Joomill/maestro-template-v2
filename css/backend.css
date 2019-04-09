@@ -1,0 +1,131 @@
+.heading {
+	background: #2287B4 !important;
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 0;
+	font-size: 13px;
+	text-transform: lowercase !important;
+	line-height: 24px;
+}
+.sub-heading {
+	background: #2287B4 !important;
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 0;
+	font-size: 13px;
+	text-transform: lowercase !important;
+	line-height: 24px;
+    width: 425px;
+}
+
+.nav-tabs
+{
+border-bottom: 1px solid #ccc;
+}
+
+.nav-tabs > li {
+    margin-bottom: 0;
+}
+
+.temp_description {
+border: 2px solid #eee;
+padding: 10px;
+color: #666;
+}
+
+.tab-content {
+border: 2px solid #eee;
+padding: 10px;
+}
+
+
+ul#myTabTabs.nav.nav-tabs:before,
+ul#myTabTabs.nav.nav-tabs:hover:before,
+ul#myTabTabs.nav.nav-tabs a[href="#details"]:before,
+ul#myTabTabs.nav.nav-tabs a[href="#attrib-style"]:before,
+ul#myTabTabs.nav.nav-tabs a[href="#attrib-logo"]:before,
+ul#myTabTabs.nav.nav-tabs a[href="#attrib-mobile"]:before,
+ul#myTabTabs.nav.nav-tabs a[href="#attrib-suffix"]:before,
+ul#myTabTabs.nav.nav-tabs a[href="#attrib-analytics"]:before,
+ul#myTabTabs.nav.nav-tabs a[href="#assignment"]:before {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none !important;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  position: relative;
+  padding-right: 10px;
+  color: #444;
+  font-size: 11px;
+  text-transform: lowercase;
+}
+
+div#myTabContent .span6 {
+  margin-top: 14px;
+  margin-left: 0;
+  width: 100%;
+}
+ul#myTabTabs.nav.nav-tabs li a {
+  border: 0px solid #F6F6F6;
+  padding: 10px 15px;
+  line-height: 25px;
+  border-radius: 0;
+  background: #F6F6F6;
+  color: #2287B4;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: none;
+ 
+}
+ul#myTabTabs.nav.nav-tabs li.active a,
+ul#myTabTabs.nav.nav-tabs > li a:hover {
+  background: #2287B4;
+  color: #fff;
+  border: 0px solid #F6F6F6;
+  border-radius: 0;
+}
+ul#myTabTabs.nav.nav-tabs a:hover:before,
+ul#myTabTabs.nav.nav-tabs li.active a:before {
+  color: #fff;
+  border-radius: 0;
+}
+
+div#myTabContent .control-group hr { border-top: 1px solid #dddddd; border-bottom: 1px solid #ffffff; width: 38em; }
+div#myTabContent .control-label { width: 20em; }
+div#myTabContent textarea { width: 400px; }
+
+@media handheld, only screen and (max-width: 800px) {
+  ul#myTabTabs.nav.nav-tabs {
+    border: 0px none;
+  }
+  ul#myTabTabs.nav.nav-tabs > li {
+    float: none;
+  }
+  ul#myTabTabs.nav.nav-tabs li a,
+  ul#myTabTabs.nav.nav-tabs li.active a,
+  ul#myTabTabs.nav.nav-tabs > li a:hover {
+    border-radius: 0;
+  }
+  ul#myTabTabs.nav.nav-tabs li a {
+    background-color: #fff;   
+  }
+}
+
+ul#myTabTabs {
+    background-image: url('../images/maestro-small.png');
+    background-repeat: no-repeat;
+    background-color: #f6f6f6;
+    background-position: right;
+    padding-right: 15px;
+}
+
+.chzn-container-single .chzn-single {
+    width: 210px;
+}

@@ -1,0 +1,47 @@
+/* ========================================================================
+   PAGINATION
+ ========================================================================== */
+
+.pagination{
+  width: 100%;
+  ul {
+    padding-left: 0px;
+  }
+  li {
+    display: inline-block;
+    margin: 2px;
+  }
+
+  i{
+    font-style: normal;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .disabled a, .active a{
+    color: #333;
+  }
+  .active a{
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+i.icon-first:before{
+  font-family: 'FontAwesome';
+  content: '\f100';
+}
+i.icon-previous:before{
+  font-family: 'FontAwesome';
+  content: '\f104';
+}
+i.icon-last:before{
+  font-family: 'FontAwesome';
+  content: '\f101';
+}
+i.icon-next:before{
+  font-family: 'FontAwesome';
+  content: '\f105';
+}
