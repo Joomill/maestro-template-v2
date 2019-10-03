@@ -1904,6 +1904,23 @@
 				</field>
 
 				<field name="note5" type="note" showon="animatecss:1"  description="TPL_MAESTRO_ANIMATECSS_DESC" />
+
+				<field
+						name="animatecssspacer"
+						type="spacer"
+						hr="true"
+				/>
+
+				<field
+						name="fontawesome"
+						class=""
+						type="text"
+						default="8c9e49af61"
+						label="TPL_MAESTRO_FONTAWESOME_LABEL"
+						description="TPL_MAESTRO_FONTAWESOME_DESC"
+				/>
+
+				<field name="note6" type="note"  description="TPL_MAESTRO_FONTAWESOME_DESC" />
 								
 			</fieldset>
 		</fields>
