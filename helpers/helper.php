@@ -82,6 +82,8 @@ class MaestroHelper
         $doc->setMetaData('X-UA-Compatible', 'IE=edge', true);
         $doc->setMetaData('viewport', 'width=device-width, initial-scale=1');
         $doc->setMetaData('content-type', 'text/html', true );
+	    $doc->setMetaData('theme-color', '#ffffff');
+	    $doc->setMetaData('robots', 'max-snippet:-1, max-image-preview:large, max-video-preview:-1');
         $doc->setMetaData('mobile-web-app-capable', 'yes');
         $doc->setMetaData('apple-mobile-web-app-capable', 'yes');
         $doc->setMetaData('apple-mobile-web-app-status-bar-style', 'black');
