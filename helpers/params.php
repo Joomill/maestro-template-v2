@@ -33,7 +33,6 @@ $homepagecomponent  = $this->params->get('homepagecomponent');
 $backtotopshow      = $this->params->get('backtotopshow');
 $analytics 			= $this->params->get('analytics');
 $animatecss 		= $this->params->get('animatecss');
-$fontawesome 		= $this->params->get('fontawesome');
 
 $toolbarcolor       = $this->params->get('toolbarcolor');
 $toolbarfontcolor   = $this->params->get('toolbarfontcolor');

@@ -25,7 +25,6 @@ MaestroHelper::localstorageFont();
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
     <jdoc:include type="head" />
-    <script src="https://kit.fontawesome.com/<?php echo $fontawesome; ?>.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="<?php echo MaestroHelper::getBodySuffix(); ?>" role="document">

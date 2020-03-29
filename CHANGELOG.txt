@@ -1,3 +1,9 @@
+Version 2.18.0 [26-03-2020]
+Replaced FontAwesome Kit with FontAwesome Free
+Updated Bootstrap v3.4.1
+Updated FontAwesome Pro 5.13.0
+Fixed height 100% to max-height 100%
+
 Version 2.17.0 [03-10-2019]
 Replaced FontAwesome  with FontAwesome Kit
 added meta-data for theme-color and robots

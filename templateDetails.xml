@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.3" type="template" client="site" method="upgrade">
 	<name>Maestro</name>
-	<creationDate>03-10-2019</creationDate>
+	<creationDate>26-03-2020</creationDate>
 	<author>Joomill</author>
 	<authorEmail>info@joomill.nl</authorEmail>
 	<authorUrl>https://www.joomill.nl</authorUrl>
-	<copyright>Copyright (C) 2006 - 2019 Joomill. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2006 - 2020 Joomill. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
-	<version>2.17.0</version>
+	<version>2.18.0</version>
 <description><![CDATA[ 
 <link href="../templates/maestro/css/backend.css" rel="stylesheet" type="text/css" media="all" />
 <p></p>
@@ -20,11 +20,11 @@
 <br/>
  <table border="0" width="100%">
 <td width="7%">Version:</td>
-		    <td width="80%">2.17.0</td>
+		    <td width="80%">2.18.0</td>
 	    </tr>
 		    <tr>
 		    <td width="7%">Date:</td>
-		    <td width="80%">03-10-2019</td>
+		    <td width="80%">26-03-2020</td>
 	    </tr>
 		 <tr>
 		    <td width="7%">Developer:</td>
@@ -1904,23 +1904,6 @@
 				</field>
 
 				<field name="note5" type="note" showon="animatecss:1"  description="TPL_MAESTRO_ANIMATECSS_DESC" />
-
-				<field
-						name="animatecssspacer"
-						type="spacer"
-						hr="true"
-				/>
-
-				<field
-						name="fontawesome"
-						class=""
-						type="text"
-						default="8c9e49af61"
-						label="TPL_MAESTRO_FONTAWESOME_LABEL"
-						description="TPL_MAESTRO_FONTAWESOME_DESC"
-				/>
-
-				<field name="note6" type="note"  description="TPL_MAESTRO_FONTAWESOME_DESC" />
 								
 			</fieldset>
 		</fields>
