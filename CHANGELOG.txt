@@ -1,3 +1,7 @@
+Version 2.18.1 [30-03-2020]
+Fixed RQCode move to FontAwesome Free
+Set Social Share to hide by default
+
 Version 2.18.0 [26-03-2020]
 Replaced FontAwesome Kit with FontAwesome Free
 Updated Bootstrap v3.4.1

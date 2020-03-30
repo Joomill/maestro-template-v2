@@ -76,7 +76,7 @@ $inline = isset($displayData['inline']) ? $displayData['inline'] : false;
 	<?php if ($displayData['qrcode'] == "1") : ?>
 		<li class="share-qrcode">
 			<a href="https://chart.googleapis.com/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl=<?php echo $url; ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=400');return false;">
-                  <i class="far fa-qrcode"></i>
+                  <i class="fasssss fa-qrcode"></i>
                 </span>
 			</a>
 		</li>
