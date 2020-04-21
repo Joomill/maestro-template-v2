@@ -18,7 +18,7 @@ MaestroHelper::unloadCss();
 MaestroHelper::unloadJs();
 MaestroHelper::loadCss();
 MaestroHelper::loadJs();
-MaestroHelper::localstorageFont();
+MaestroHelper::loadGoogleFonts();
 ?>
 
 <!DOCTYPE html>
@@ -335,6 +335,13 @@ MaestroHelper::localstorageFont();
         </div>
     </div>
 </footer>
+
+<?php if ($this->countModules('sticky-bottom')): ?>
+    <!-- Sticky Bottom -->
+    <div id="sticky-bottom" class="sticky-bottom <?php echo $stickybottomresponsive; ?> clearfix">
+        <jdoc:include type="modules" name="sticky-bottom" style="notitle" />
+    </div>
+<?php endif; ?>
 
 <jdoc:include type="modules" name="debug" style="notitle" />
 

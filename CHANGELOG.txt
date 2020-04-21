@@ -1,3 +1,12 @@
+TODO Namespacing in JMGooglefonts
+TODO Botton rechts naast navbar
+TODO Language/Shoppingcart in toolbar
+
+Version 2.19.0 [22-04-2020]
+** READY FOR JOOMLA4 BETA1 **
+Added Sticky Bottom moduleposition
+Added Google Fonts selection (update fonts:  https://developers.google.com/fonts/docs/developer_api)
+
 Version 2.18.1 [30-03-2020]
 Fixed RQCode move to FontAwesome Free
 Set Social Share to hide by default

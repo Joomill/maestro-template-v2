@@ -167,3 +167,6 @@ $copyrightpadding  	= $this->params->get('copyrightpadding');
 $copyrightwidth    	= $this->params->get('copyrightwidth');
 $copyrightalign    	= $this->params->get('copyrightalign');
 $copyrightmodulestyle    =  $this->params->get('copyrightmodulestyle');
+
+$stickybottomresponsive  = $this->params->get('stickybottomresponsive');
+if(!empty($stickybottomresponsive)) { $stickybottomresponsive = join(' ', $this->params->get('stickybottomresponsive')); }

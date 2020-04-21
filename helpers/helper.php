@@ -126,8 +126,8 @@ class MaestroHelper
      */
     static public function getPageClass()
     {
-        $activeMenu = Factory::getApplication()->getMenu()->getActive();
-        $pageclass  = ($activeMenu) ? $activeMenu->params->get('pageclass_sfx', '') : '';
+	    $menu     = Factory::getApplication()->getMenu()->getActive();
+	    $pageclass = $menu->getParams()->get('pageclass_sfx');
 
         return $pageclass;
     }
@@ -278,8 +278,7 @@ class MaestroHelper
     static public function loadCss()
     {
     	$animatecss = Factory::getApplication()->getTemplate(true)->params->get('animatecss');
-    	HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/template.css', array('version' => 'auto'));	
-      HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/fonts.css', array('version' => 'auto')); 
+    	HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/template.css', array('version' => 'auto'));
 		if ($animatecss) {
         	HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/animate.css', array('version' => 'auto'));
     	}
@@ -294,7 +293,10 @@ class MaestroHelper
         $doc = Factory::getDocument();
 
         // Call JavaScript to be able to unset it correctly
-        HTMLHelper::_('behavior.framework');
+	    if (version_compare(JVERSION, '4.0', '<'))
+	    {
+		    HTMLHelper::_('behavior.framework');
+	    }
         HTMLHelper::_('bootstrap.framework');
         HTMLHelper::_('jquery.framework');
         HTMLHelper::_('bootstrap.tooltip');
@@ -412,17 +414,40 @@ class MaestroHelper
     }
 
 
-   /**
-    * Load custom font in localstorage
-    *
-    * @since  PerfectSite2.1.0
-    */
-   static public function localstorageFont()
-   {
-        $doc = Factory::getDocument();
-        
-       // Keep whitespace below for nicer source code
-       $javascript = "    !function(){\"use strict\";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent(\"on\"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))c(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open(\"GET\",o,!0),e(n,\"load\",function(){4===n.readyState&&(c(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var a=document.createElement(\"link\");a.href=o,a.rel=\"stylesheet\",a.type=\"text/css\",document.getElementsByTagName(\"head\")[0].appendChild(a),document.cookie=\"font_css_cache\"}}function c(e){var t=document.createElement(\"style\");t.innerHTML=e,document.getElementsByTagName(\"head\")[0].appendChild(t)}var o=\"". $doc->baseurl . "/templates/" . self::template() . "/css/fonts.css\";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf(\"font_css_cache\")>-1?n():e(window,\"load\",n)}();";
-       $doc->addScriptDeclaration($javascript);
-   }
+	/**
+	 * load Google Fonts
+	 *
+	 * @since  Maestro 2.19.0
+	 */
+	static public function loadGoogleFonts()
+	{
+		if (Factory::getApplication()->getTemplate(true)->params->get('googlefonts')) {
+			$doc  = Factory::getDocument();
+			$doc->addCustomTag('<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>');
+			$doc->addCustomTag('<link rel="dns-prefetch" href="https://fonts.googleapis.com/">');
+
+			$suffix = '';
+			if (Factory::getApplication()->getTemplate(true)->params->get('googlefontssubset')) {
+				$suffix = '&amp;subset=' . Factory::getApplication()->getTemplate(true)->params->get('googlefontssubset');
+			}
+
+			$fonts = array(
+				'heading'    => Factory::getApplication()->getTemplate(true)->params->get('headingfont'),
+				'content'    => Factory::getApplication()->getTemplate(true)->params->get('contentfont'),
+				'navbar'     => Factory::getApplication()->getTemplate(true)->params->get('navbarfont')
+			);
+
+			// heading or content or navbar may use the same font, filter the results to only load once
+			$load = array();
+			foreach ($fonts as $key => $val) {
+				$load[$val] = true;
+			}
+			$load = array_keys($load);
+			foreach ($load as $font) {
+				$doc->addCustomTag('<link href="https://fonts.googleapis.com/css?family=' . $font . $suffix . '" rel="stylesheet" type="text/css" />');
+			}
+
+
+		 }
+	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.3" type="template" client="site" method="upgrade">
 	<name>Maestro</name>
-	<creationDate>30-03-2020</creationDate>
+	<creationDate>22-04-2020</creationDate>
 	<author>Joomill</author>
 	<authorEmail>info@joomill.nl</authorEmail>
 	<authorUrl>https://www.joomill.nl</authorUrl>
 	<copyright>Copyright (C) 2006 - 2020 Joomill. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
-	<version>2.18.1</version>
+	<version>2.19.0</version>
 <description><![CDATA[ 
 <link href="../templates/maestro/css/backend.css" rel="stylesheet" type="text/css" media="all" />
 <p></p>
@@ -20,11 +20,11 @@
 <br/>
  <table border="0" width="100%">
 <td width="7%">Version:</td>
-		    <td width="80%">2.18.1</td>
+		    <td width="80%">2.19.0</td>
 	    </tr>
 		    <tr>
 		    <td width="7%">Date:</td>
-		    <td width="80%">30-03-2020</td>
+		    <td width="80%">22-04-2020</td>
 	    </tr>
 		 <tr>
 		    <td width="7%">Developer:</td>
@@ -46,6 +46,7 @@
 	
 	<files>
 		<folder>css</folder>
+		<folder>elements</folder>
 		<folder>fonts</folder>
 		<folder>helpers</folder>
 		<folder>html</folder>
@@ -83,6 +84,7 @@
         <position>bottom-c</position>
         <position>bottom-d</position>
         <position>footer-menu</position>
+		<position>sticky-bottom</position>
 		<position>copyright</position>
 		<position>cookies</position>
         <position>debug</position>
@@ -98,10 +100,200 @@
 	
 	<config>
 		<fields name="params">
+
+			<fieldset name="MAESTRO_FONTS" addfieldpath="templates/maestro/elements">
+				<field name="notefonts" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_FONTS_LABEL" description="TPL_MAESTRO_NOTE_FONTS_DESC" />
+				<field name="googlefonts"
+					   type="radio"
+					   class="btn-group"
+					   default="1"
+					   label="TPL_MAESTRO_GOOGLE_FONTS_LABEL"
+					   description="TPL_MAESTRO_GOOGLE_FONTS_DESC">
+					<option value="0">TPL_MAESTRO_GOOGLE_FONTS_LOCAL</option>
+					<option value="1">TPL_MAESTRO_GOOGLE_FONTS_GOOGLE</option>
+				</field>
+
+				<field name="googlefontssubset"
+					   default=""
+					   type="list"
+					   showon="googlefonts:1"
+					   label="TPL_MAESTRO_GOOGLE_FONTS_SUBSET_LABEL"
+					   description="TPL_MAESTRO_GOOGLE_FONTS_SUBSET_DESC">
+					<option value="">TPL_NO_GOOGLE_FONTS_SUBSET</option>
+					<option value="latin">Latin</option>
+					<option value="latin-ext">Latin extended</option>
+					<option value="khmer">Khmer</option>
+					<option value="cyrillic">Cyrillic</option>
+					<option value="cyrillic-ext">Cyrillic extended</option>
+					<option value="greek">Greek</option>
+					<option value="greek-ext">Greek extended</option>
+					<option value="vietnamese">Vietnamese</option>
+				</field>
+
+				<field
+						name="googlefontsspacer"
+						type="spacer"
+						hr="true"
+				/>
+
+				<field
+					name="headingfont"
+					default="Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+					type="JMFonts"
+					label="TPL_MAESTRO_HEADING_FONT_LABEL"
+					description="TPL_MAESTRO_HEADING_FONT_DESC"
+				/>
+
+				<field
+						name="headingfontweight"
+						type="list"
+						default="700"
+						label="TPL_MAESTRO_HEADING_FONTWEIGHT_LABEL"
+						description="TPL_MAESTRO_HEADING_FONTWEIGHT_DESC"
+				>
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+					<option value="900">900</option>
+				</field>
+
+				<field
+						name="headingcolordark"
+						type="color"
+						default="#444444"
+						label="TPL_MAESTRO_HEADING_COLOR_DARK"
+				/>
+
+				<field
+						name="headingcolorlight"
+						type="color"
+						default="#ffffff"
+						label="TPL_MAESTRO_HEADING_COLOR_LIGHT"
+				/>
+
+				<field
+						name="headingfontspacer"
+						type="spacer"
+						hr="true"
+				/>
+
+				<field
+					name="contentfont"
+					default="Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+					type="JMFonts"
+					label="TPL_MAESTRO_CONTENT_FONT_LABEL"
+					description="TPL_MAESTRO_CONTENT_FONT_DESC"
+				/>
+
+				<field
+					name="contentfontsize"
+					default="14px"
+					type="input"
+					label="TPL_MAESTRO_CONTENT_FONTSIZE_LABEL"
+					description="TPL_MAESTRO_CONTENT_FONTSIZE_DESC"
+				/>
+
+				<field
+						name="contentfontweight"
+						type="list"
+						default="400"
+						label="TPL_MAESTRO_CONTENT_FONTWEIGHT_LABEL"
+						description="TPL_MAESTRO_CONTENT_FONTWEIGHT_DESC"
+				>
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+					<option value="900">900</option>
+				</field>
+
+				<field
+						name="contentcolordark"
+						type="color"
+						default="#444444"
+						label="TPL_MAESTRO_CONTENT_COLOR_DARK"
+				/>
+
+				<field
+						name="contentcolorlight"
+						type="color"
+						default="#ffffff"
+						label="TPL_MAESTRO_CONTENT_COLOR_LIGHT"
+				/>
+
+				<field
+						name="contentfontspacer"
+						type="spacer"
+						hr="true"
+				/>
+
+				<field
+						name="linkcolor"
+						type="color"
+						default="#337ab7"
+						label="TPL_MAESTRO_LINK_COLOR"
+				/>
+
+				<field
+						name="linkcolorhover"
+						type="color"
+						default="#286090"
+						label="TPL_MAESTRO_LINK_COLOR_HOVER"
+				/>
+
+				<field
+						name="linkspacer"
+						type="spacer"
+						hr="true"
+				/>
+
+				<field
+					name="navbarfont"
+					default="Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+					type="JMFonts"
+					label="TPL_MAESTRO_NAVBAR_FONT_LABEL"
+					description="TPL_MAESTRO_NAVBAR_FONT_DESC"
+				/>
+
+				<field
+						name="navbarfontsize"
+						default="14px"
+						type="input"
+						label="TPL_MAESTRO_NAVBAR_FONTSIZE_LABEL"
+						description="TPL_MAESTRO_NAVBAR_FONTSIZE_DESC"
+				/>
+
+				<field
+						name="navbarfontweight"
+						type="list"
+						default="400"
+						label="TPL_MAESTRO_NAVBAR_FONTWEIGHT_LABEL"
+						description="TPL_MAESTRO_NAVBAR_FONTWEIGHT_DESC"
+				>
+					<option value="100">100</option>
+					<option value="200">200</option>
+					<option value="300">300</option>
+					<option value="400">400</option>
+					<option value="500">500</option>
+					<option value="600">600</option>
+					<option value="700">700</option>
+					<option value="800">800</option>
+					<option value="900">900</option>
+				</field>
+			</fieldset>
 		
 			<fieldset name="MAESTRO_HEADER">
 
-                <field name="note0" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_HEADER_LABEL" description="TPL_MAESTRO_NOTE_HEADER_DESC" />
+                <field name="noteheader" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_HEADER_LABEL" description="TPL_MAESTRO_NOTE_HEADER_DESC" />
 				<field
 					name="toolbarcolor"
 					type="list"
@@ -528,7 +720,7 @@
 
             </fieldset>
             <fieldset name="MAESTRO_TOP">
-				<field name="note1" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_TOP_LABEL" description="TPL_MAESTRO_NOTE_TOP_DESC" />
+				<field name="notetop" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_TOP_LABEL" description="TPL_MAESTRO_NOTE_TOP_DESC" />
 				
 				<field
 					name="topacolor"
@@ -873,7 +1065,7 @@
             </fieldset>
             <fieldset name="MAESTRO_MAINBODY">
 
-				<field name="note4" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_MAINBODY_LABEL" description="TPL_MAESTRO_NOTE_MAINBODY_DESC" />
+				<field name="notemainbody" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_MAINBODY_LABEL" description="TPL_MAESTRO_NOTE_MAINBODY_DESC" />
 
 				<field
 					name="mainbodycolor"
@@ -1056,7 +1248,7 @@
 				/>
             </fieldset>
             <fieldset name="MAESTRO_BOTTOM">
-				<field name="note2" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_BOTTOM_LABEL" description="TPL_MAESTRO_NOTE_BOTTOM_DESC" />
+				<field name="notebottom" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_BOTTOM_LABEL" description="TPL_MAESTRO_NOTE_BOTTOM_DESC" />
 				
 				<field
 					name="bottomacolor"
@@ -1401,7 +1593,7 @@
             </fieldset>
             <fieldset name="MAESTRO_FOOTER">
 
-				<field name="note3" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_FOOTER_LABEL" description="TPL_MAESTRO_NOTE_FOOTER_DESC" />
+				<field name="notefooter" type="note" class="alert alert-info" label="TPL_MAESTRO_NOTE_FOOTER_LABEL" description="TPL_MAESTRO_NOTE_FOOTER_DESC" />
 				
 				<field
 					name="footermenucolor"
@@ -1571,11 +1763,25 @@
 					type="spacer"
 					hr="true"
 				/>
+
+				<field
+						name="stickybottomresponsive"
+						type="list"
+						multiple="true"
+						default="hidden-lg hidden-md"
+						label="TPL_MAESTRO_STICKYBOTTOM_RESPONSIVE_LABEL"
+						description="TPL_MAESTRO_RESPONSIVE_DESC"
+				>
+					<option value="hidden-xs">TPL_MAESTRO_OPTION_RESPONSIVE_HIDE_XS</option>
+					<option value="hidden-sm">TPL_MAESTRO_OPTION_RESPONSIVE_HIDE_SM</option>
+					<option value="hidden-md">TPL_MAESTRO_OPTION_RESPONSIVE_HIDE_MD</option>
+					<option value="hidden-lg">TPL_MAESTRO_OPTION_RESPONSIVE_HIDE_LG</option>
+				</field>
 				
 			</fieldset>
 			<fieldset name="MAESTRO_VARIABLES">
 
-                <field name="note4" type="note" class="alert alert-success" label="TPL_MAESTRO_NOTE_VARIABLES_LABEL" description="TPL_MAESTRO_NOTE_VARIABLES_DESC" />
+                <field name="notevariables" type="note" class="alert alert-success" label="TPL_MAESTRO_NOTE_VARIABLES_LABEL" description="TPL_MAESTRO_NOTE_VARIABLES_DESC" />
 
                 <field
 						name="bgcolor1"
@@ -1610,40 +1816,6 @@
 
 				<field
 						name="bgcolorspacer"
-						type="spacer"
-						hr="true"
-				/>
-
-				<field
-						name="headingcolordark"
-						type="color"
-						default="#444444"
-						label="TPL_MAESTRO_HEADINGCOLOR_DARK"
-				/>
-
-				<field
-						name="headingcolorlight"
-						type="color"
-						default="#ffffff"
-						label="TPL_MAESTRO_HEADINGCOLOR_LIGHT"
-				/>
-
-				<field
-						name="fontcolordark"
-						type="color"
-						default="#444444"
-						label="TPL_MAESTRO_FONTCOLOR_DARK"
-				/>
-
-				<field
-						name="fontcolorlight"
-						type="color"
-						default="#ffffff"
-						label="TPL_MAESTRO_FONTCOLOR_LIGHT"
-				/>
-
-				<field
-						name="fontcolorspacer"
 						type="spacer"
 						hr="true"
 				/>
@@ -1903,7 +2075,7 @@
 						<option value="0">JNO</option>
 				</field>
 
-				<field name="note5" type="note" showon="animatecss:1"  description="TPL_MAESTRO_ANIMATECSS_DESC" />
+				<field name="noteanimate" type="note" showon="animatecss:1"  description="TPL_MAESTRO_ANIMATECSS_DESC" />
 								
 			</fieldset>
 		</fields>
